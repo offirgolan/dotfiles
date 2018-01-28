@@ -1,0 +1,15 @@
+[storage]
+# Use google drive since some of these apps have private data and licenses
+engine = google_drive
+
+[applications_to_sync]
+ssh
+dash
+amphetamine
+bettersnaptool
+spotify
+transmission
+vlc
+sketch
+xcode
+sourcetree
