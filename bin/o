@@ -1,0 +1,13 @@
+#!/bin/sh
+#
+# Quick shortcut to a finder window.
+#
+# USAGE:
+#
+#   $ o
+#   # => opens the current directory in finder
+#
+#   $ o .
+#   $ o /usr/local
+#   # => opens the specified directory in finder
+exec "open" "${1:-.}"
