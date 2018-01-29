@@ -14,9 +14,9 @@ export FZF_DEFAULT_OPTS='
   --prompt="❯ "
   --height="80%"
   --preview="
-    [[ -d {} ]] && echo {} is a directory && return 1 ||
-    [[ ! -f {} ]] && return 1 ||
-    [[ $(file --mime {}) =~ binary ]] && echo {} is a binary file && return 1 ||
+    [[ ! -e {} ]] && return 0 ||
+    [[ -d {} ]] && echo {} is a directory && return 0 ||
+    [[ $(file --mime {}) =~ binary ]] && echo {} is a binary file && return 0 ||
     (highlight -O ansi {} || cat {}) 2> /dev/null | head -500
   "
   --reverse
