@@ -10,6 +10,7 @@ packages=(
     eslint
     spoof
     ember-cli
+    tldr
 )
 
 npm install -g "${packages[@]}"

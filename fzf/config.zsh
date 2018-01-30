@@ -12,7 +12,7 @@ source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 #   - Sets up preview command
 export FZF_DEFAULT_OPTS='
   --prompt="❯ "
-  --height="80%"
+  --height="50%"
   --preview="
     [[ ! -e {} ]] && return 0 ||
     [[ -d {} ]] && echo {} is a directory && return 0 ||
