@@ -1,6 +1,7 @@
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
 
+DISABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
 
 fpath=($DOTFILES/functions $fpath)
