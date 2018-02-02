@@ -3,7 +3,7 @@
 # iTerm Setup
 
 # Install the iTerm theme
-open "$DOTFILES/iterm/themes/Chesterish.itermcolors"
+open "$DOTFILES/iterm/themes/palenight.itermcolors"
 
 # Specify the preferences directory
 defaults write com.googlecode.iterm2 "PrefsCustomFolder" -string "$DOTFILES/iterm"

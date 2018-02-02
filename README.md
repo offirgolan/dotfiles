@@ -36,7 +36,7 @@ There's a few special files in the hierarchy.
 
 ## install
 
-Run this:
+1. Run this:
 
 ```sh
 git clone https://github.com/offirgolan/dotfiles.git ~/.dotfiles
@@ -47,8 +47,16 @@ script/bootstrap
 This will symlink the appropriate files in `.dotfiles` to your home directory.
 Everything is configured and tweaked within `~/.dotfiles`.
 
-The main file you'll want to change right off the bat is `zsh/zshrc.symlink`,
-which sets up a few paths that'll be different on your particular machine.
+2. In a new terminal session run this:
+
+```sh
+script/install
+```
+
+This will run each topic's install script.
+
+
+## dot
 
 `dot` is a simple script that installs some dependencies, sets sane macOS
 defaults, and so on. Tweak this script, and occasionally run `dot` from

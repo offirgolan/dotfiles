@@ -21,9 +21,9 @@ export FZF_DEFAULT_OPTS='
   "
   --reverse
   --cycle
-  --color=bg+:#293340,bg:#293340,spinner:#ffec8e,hl:#be86e3
-  --color=fg:#cdd2e9,header:#4cb2ff,info:#4cb2ff,pointer:#faa84a
-  --color=marker:#ffec8e,fg+:#faa84a,prompt:#e17e85,hl+:#be86e3
+  --color=bg+:#292d3e,bg:#292d3e,spinner:#e1acff,hl:#c3e88d
+  --color=fg:#959dcb,header:#89ddff,info:#89ddff,pointer:#ffcc00
+  --color=marker:#e1acff,fg+:#ffcc00,prompt:#f07178,hl+:#c3e88d
 '
 
 # Use `fd` instead of find for faster lookups.
