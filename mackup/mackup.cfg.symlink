@@ -1,6 +1,5 @@
 [storage]
-# Use google drive since some of these apps have private data and licenses
-engine = google_drive
+engine = dropbox
 
 [applications_to_sync]
 ssh

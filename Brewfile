@@ -43,8 +43,9 @@ brew 'source-highlight'
 brew 'brew-cask-completion'
 
 # Install Apps
+cask '1password'
+cask 'dropbox'
 cask 'alfred'
-cask 'dashlane'
 cask 'appcleaner'
 cask 'browser-chooserx'
 cask 'dash'
