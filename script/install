@@ -6,9 +6,49 @@ set -e
 
 cd "$(dirname $0)"/..
 
-# Run Homebrew through the Brewfile
-echo "› brew bundle"
-brew bundle
+confirm() {
+  echo -n "$1 (y/n)? "
+  read answer
+
+  if echo "$answer" | grep -iq "^n" ;then
+    return 1; # No
+  else
+    return 0; # Yes
+  fi
+}
+
+if confirm "Install homebrew dependencies" ;then
+  echo "› Running: bundle install"
+  brew bundle
+  echo "› Done."
+else
+  echo "› Skipped."
+fi
+
+if confirm "Is Dropbox set up" ;then
+  echo "› Sweet!"
+else
+  echo "› Please setup Dropbox before continuing."
+  echo "› Exiting."
+  exit
+fi
+
+if test $(which mackup)
+then
+  if confirm "Restore files via Mackup" ;then
+    echo "› Running: mackup restore"
+    mackup restore
+    echo "› Done."
+  else
+    echo "› Skipped."
+  fi
+fi
 
 # find the installers and run them iteratively
-find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
+echo "› Running install scripts..."
+find . -name install.sh |
+while read installer ;
+do
+  echo "›   Installing ${installer}..."
+  sh -c "${installer}" ;
+done
