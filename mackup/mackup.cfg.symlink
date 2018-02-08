@@ -2,6 +2,8 @@
 engine = dropbox
 
 [applications_to_sync]
+1password-6
+itermocil
 ssh
 dash
 amphetamine
