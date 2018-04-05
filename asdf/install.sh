@@ -9,6 +9,7 @@ asdf_dir=$HOME/.asdf
 if [ ! -d $asdf_dir ]; then
     echo "Installing asdf..."
     git clone https://github.com/asdf-vm/asdf.git $asdf_dir || exit 1
+    . ~/.zshrc # reload the zsh config
 
     # Install the correct dependencies
     if test "$(uname)" = "Darwin"
