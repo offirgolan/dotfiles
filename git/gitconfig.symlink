@@ -70,6 +70,9 @@
         # Remote
         r = remote -v
 
+        # Prune local git tags that don't exist on remote
+        prune-tags = !git tag -l | xargs git tag -d && git fetch -t
+
         # Submodules
         subpl = submodule update --init --recursive
 
@@ -270,7 +273,7 @@
         prune = true
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true

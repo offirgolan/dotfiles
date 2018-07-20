@@ -80,6 +80,5 @@ cask 'abstract'
 mas 'Amphetamine', id: 937984704
 mas 'Paste', id: 967805235
 mas 'Postico', id: 1031280567
-mas 'Twitter', id: 409789998
 mas 'Wunderlist', id: 410628904
 mas 'BetterSnapTool', id: 417375580
