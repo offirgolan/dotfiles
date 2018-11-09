@@ -192,7 +192,7 @@
 
 # Git mergetool
 [merge]
-        tool = opendiff
+	tool = opendiff
 
 [core]
         editor = vim
@@ -273,9 +273,12 @@
         prune = true
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [commit]
 	template = /Users/ogolan/.stCommitMsg
+[user]
+	name = offirgolan
+	email = offirgolan@gmail.com
