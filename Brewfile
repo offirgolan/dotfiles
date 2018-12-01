@@ -41,6 +41,7 @@ brew 'wifi-password'
 brew 'TomAnthony/brews/itermocil'
 brew 'source-highlight'
 brew 'brew-cask-completion'
+brew 'thefuck'
 
 # Install Apps
 cask '1password'
@@ -75,6 +76,7 @@ cask 'utc-menu-clock'
 cask 'vlc'
 cask 'whatsapp'
 cask 'abstract'
+cask 'bartender'
 
 # App Store
 mas 'Amphetamine', id: 937984704
