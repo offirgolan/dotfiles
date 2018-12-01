@@ -76,7 +76,7 @@ cask 'utc-menu-clock'
 cask 'vlc'
 cask 'whatsapp'
 cask 'abstract'
-cask 'bartender'
+cask 'vanilla'
 
 # App Store
 mas 'Amphetamine', id: 937984704
