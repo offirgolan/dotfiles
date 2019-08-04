@@ -28,7 +28,6 @@ brew 'spark'
 brew 'unrar'
 brew 'wget'
 brew 'mackup'
-brew 'yarn', args: ["without-node"]
 brew 'youtube-dl'
 brew 'watchman'
 brew 'zplug'
@@ -76,7 +75,7 @@ cask 'utc-menu-clock'
 cask 'vlc'
 cask 'whatsapp'
 cask 'abstract'
-cask 'vanilla'
+cask 'muzzle'
 
 # App Store
 mas 'Amphetamine', id: 937984704
