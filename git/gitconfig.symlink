@@ -273,12 +273,12 @@
         prune = true
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [commit]
-	template = /Users/ogolan/.stCommitMsg
+	template = ~/.stCommitMsg
 [user]
-	name = offirgolan
+	name = Offir Golan
 	email = offirgolan@gmail.com
