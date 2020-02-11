@@ -47,9 +47,7 @@ cask '1password'
 cask 'dropbox'
 cask 'alfred'
 cask 'appcleaner'
-cask 'browser-chooserx'
 cask 'dash'
-cask 'google-backup-and-sync'
 cask 'iterm2'
 cask 'macdown'
 cask 'firefox'
@@ -79,7 +77,5 @@ cask 'muzzle'
 
 # App Store
 mas 'Amphetamine', id: 937984704
-mas 'Paste', id: 967805235
 mas 'Postico', id: 1031280567
-mas 'Wunderlist', id: 410628904
 mas 'BetterSnapTool', id: 417375580

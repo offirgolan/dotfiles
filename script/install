@@ -33,17 +33,6 @@ else
   exit
 fi
 
-if test $(which mackup)
-then
-  if confirm "Restore files via Mackup" ;then
-    echo "› Running: mackup restore"
-    mackup restore
-    echo "› Done."
-  else
-    echo "› Skipped."
-  fi
-fi
-
 # find the installers and run them iteratively
 echo "› Running install scripts..."
 find . -name install.sh |
