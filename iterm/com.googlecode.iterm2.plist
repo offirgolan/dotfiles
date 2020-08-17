@@ -1275,7 +1275,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>1610 901 620 392 0 0 3840 1577 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>224 753 920 488 0 0 3840 1577 </string>
+	<string>999 952 920 488 0 0 3840 1577 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1578 381 878 658 0 0 3840 1577 </string>
 	<key>New Bookmarks</key>
@@ -2347,11 +2347,12 @@
 	<array>
 		<string>3.3.7</string>
 		<string>3.3.8</string>
+		<string>3.3.9</string>
 	</array>
 	<key>NoSyncInstallationId</key>
 	<string>A0C5F7A2-2106-4C86-AA1F-7A17DBDED57D</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>6</integer>
+	<integer>25</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -3134,15 +3135,17 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-02-06T17:46:50Z</date>
+	<date>2020-05-30T06:54:03Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
+	<key>SUUpdateGroupIdentifier</key>
+	<integer>194856578</integer>
 	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>ShowPaneTitles</key>
 	<true/>
 	<key>SoundForEsc</key>
@@ -3177,7 +3180,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.3.8</string>
+	<string>3.3.9</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
