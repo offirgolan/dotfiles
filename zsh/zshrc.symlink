@@ -19,41 +19,56 @@ do
   source $file
 done
 
-# setup zplug and install all the plugins
-export ZPLUG_HOME=/usr/local/opt/zplug
-source $ZPLUG_HOME/init.zsh
-
-zplug "plugins/git", from:oh-my-zsh
-zplug "plugins/pip", from:oh-my-zsh
-zplug "plugins/common-aliases", from:oh-my-zsh
-zplug "plugins/colored-man-pages", from:oh-my-zsh
-zplug "plugins/brew", from:oh-my-zsh
-zplug "plugins/ember-cli", from:oh-my-zsh
-zplug "plugins/history", from:oh-my-zsh
-zplug "plugins/osx", from:oh-my-zsh
-zplug "plugins/yarn", from:oh-my-zsh
-zplug "plugins/rails", from:oh-my-zsh
-
-zplug "changyuheng/fz", defer:1
-zplug "rupa/z", use:z.sh
-zplug "djui/alias-tips"
-zplug "lukechilds/zsh-better-npm-completion", defer:2
-zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-history-substring-search"
-zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
-zplug "changyuheng/zsh-interactive-cd"
-zplug "mafredri/zsh-async", from:github
-zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
-
-# zplug check returns true if all packages are installed
-# Therefore, when it returns false, run zplug install
-if ! zplug check; then
-  zplug install
+### Added by Zinit's installer
+if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
+    print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
+    command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
+        print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
+        print -P "%F{160}▓▒░ The clone has failed.%f%b"
 fi
 
-# source plugins and add commands to the PATH
-zplug load
+source "$HOME/.zinit/bin/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zinit-zsh/z-a-rust \
+    zinit-zsh/z-a-as-monitor \
+    zinit-zsh/z-a-patch-dl \
+    zinit-zsh/z-a-bin-gem-node
+
+### End of Zinit's installer chunk
+
+zinit wait lucid light-mode for \
+  OMZ::plugins/common-aliases \
+  OMZ::plugins/brew \
+  OMZ::plugins/git \
+  OMZ::plugins/pip \
+  OMZ::plugins/yarn \
+  OMZ::plugins/npm \
+  OMZ::plugins/history \
+  OMZ::plugins/rails \
+  OMZ::plugins/colored-man-pages \
+  rupa/z \
+  changyuheng/fz \
+  changyuheng/zsh-interactive-cd \
+  djui/alias-tips \
+  blockf \
+    zsh-users/zsh-completions \
+    zsh-users/zsh-history-substring-search \
+    lukechilds/zsh-better-npm-completion \
+  atload"!_zsh_autosuggest_start" \
+    zsh-users/zsh-autosuggestions
+
+zinit pack"default+keys" for fzf
+zinit light zdharma/fast-syntax-highlighting
+
+# theme
+zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
+zinit light sindresorhus/pure
 
 # load everything but the path, completion, and plugin files
 for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
@@ -76,8 +91,6 @@ do
   source $file
 done
 
-unset config_files updated_at
-
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
 # you'll have access to them in your scripts.
@@ -85,3 +98,5 @@ if [[ -a ~/.localrc ]]
 then
   source ~/.localrc
 fi
+
+unset config_files updated_at
