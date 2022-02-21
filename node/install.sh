@@ -7,7 +7,4 @@ sh -c $DOTFILES/asdf/install.sh
 brew install coreutils gpg
 
 # Add the asdf nodejs plugin
-asdf plugin-add nodejs
-
-# Imports Node.js release team's OpenPGP keys to the keyring
-bash $HOME/.asdf/plugins/nodejs/bin/import-release-team-keyring
+asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git

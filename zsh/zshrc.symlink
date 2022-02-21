@@ -63,7 +63,7 @@ zinit wait lucid light-mode for \
   atload"!_zsh_autosuggest_start" \
     zsh-users/zsh-autosuggestions
 
-zinit pack"default+keys" for fzf
+zinit pack"bgn-binary+keys" for fzf
 zinit light zdharma-continuum/fast-syntax-highlighting
 
 # theme

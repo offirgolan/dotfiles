@@ -59,13 +59,13 @@ export CLICOLOR_FORCE=1
 alias l="ls -lF ${colorflag}"
 
 # ls options: A = include hidden (but not . or ..), F = put `/` after folders, h = byte unit suffixes
-alias ls='ls -AFh ${colorflag} --group-directories-first'
+alias ls='gls -AFh ${colorflag} --group-directories-first'
 
 # List all files colorized in long format, including dot files
 alias la="ls -la ${colorflag}"
 
 # List only directories
-alias lsd='gls -l | grep "^d"'
+alias lsd='ls -l | grep "^d"'
 
 # `cat` with beautiful colors. requires Pygments installed.
 # sudo easy_install -U Pygments
