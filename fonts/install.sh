@@ -2,9 +2,9 @@
 #
 # Fonts
 #
-# Installs all fonts found in ~/Dropbox/Fonts
+# Installs all fonts found in ~/Library/CloudStorage/Dropbox/Fonts
 
-dropbox_fonts_dir=$HOME/Dropbox/Fonts
+dropbox_fonts_dir=$HOME/Library/CloudStorage/Dropbox/Fonts
 
 if [[ "$(uname -s)" = "Darwin" && -d $dropbox_fonts_dir ]]; then
   echo "Installing fonts..."

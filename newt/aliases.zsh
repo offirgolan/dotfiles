@@ -4,6 +4,7 @@ if [ -x "$(command -v newt)" ]; then
   alias node="newt exec node"
   alias yarn="newt exec yarn"
   alias npm="newt exec npm"
+  alias npx="newt exec npx"
   alias ruby="newt exec ruby"
 fi
 
