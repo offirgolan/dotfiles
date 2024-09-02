@@ -7,6 +7,3 @@ alias localrc="if [[ -a ~/.zsh.local ]]; then ${EDITOR} ~/.zsh.local; fi"
 
 # fd is used in oh-my-zsh/plugins/common-aliases so need to rename it
 alias fnd='\fd'
-
-# Add fuck alias for thefuck
-eval $(thefuck --alias)

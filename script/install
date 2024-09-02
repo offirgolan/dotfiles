@@ -25,14 +25,6 @@ else
   echo "› Skipped."
 fi
 
-if confirm "Is Dropbox set up" ;then
-  echo "› Sweet!"
-else
-  echo "› Please setup Dropbox before continuing."
-  echo "› Exiting."
-  exit
-fi
-
 # find the installers and run them iteratively
 echo "› Running install scripts..."
 find . -name install.sh |
