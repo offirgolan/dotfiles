@@ -1247,13 +1247,13 @@
 	<key>Hotkey</key>
 	<true/>
 	<key>HotkeyChar</key>
-	<integer>27</integer>
+	<integer>126</integer>
 	<key>HotkeyCode</key>
-	<integer>53</integer>
+	<integer>50</integer>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
 	<key>HotkeyModifiers</key>
-	<integer>1048840</integer>
+	<integer>1966379</integer>
 	<key>IRMemory</key>
 	<integer>4</integer>
 	<key>JobName</key>

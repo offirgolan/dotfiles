@@ -47,6 +47,9 @@ cask 'the-unarchiver'
 cask 'vlc'
 cask 'whatsapp'
 cask 'muzzle'
+cask 'karabiner-elements'
+cask 'raycast'
 
 # App Store
 mas 'Amphetamine', id: 937984704
+mas 'Magnet', id: 441258766
